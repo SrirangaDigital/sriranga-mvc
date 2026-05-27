@@ -57,8 +57,8 @@ class View {
 				$subNav = $this->getNavigation($value . '/');
 				if($subNav) {
 
-					$dirs{$key} = array($value);
-					array_push($dirs{$key}, $subNav);
+					$dirs[$key] = array($value);
+					array_push($dirs[$key], $subNav);
 				}
 			}
 			return $dirs;

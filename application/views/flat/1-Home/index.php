@@ -23,7 +23,7 @@
 <div class="container first-stage">
   <div class="row p-4">
     <h3 class="mb-4">Sriranga Digital  </h3>
-    <p class="mb-3">We offer complete digital typesetting solutions. Our technology is based on powerful text formatting programs TeX, LaTeX and related packages, Metafont, Metapost, PSTricks and PDF utilities.</p>
+    <p class="mb-3">We offer complete digital typesetting solutions.  Our technology is based on powerful text formatting programs TeX, LaTeX and related packages, Metafont, Metapost, PSTricks and PDF utilities.</p>
     <p class="mb-3">Our office is setup in the picturesque town of Srirangapatna, an island surrounded by river Kaveri about 125 Kms from Bangalore. We work mainly on the Linux platform and use / contribute to the Free and OpenSource software.</p>
     <p class="mb-3">We can handle various stages of Journal production from preparing electronic versions from manuscripts to producing PDF / HTML / XML outputs for printing, Web and archiving, including proofing, copy editing and preparation of various Indexes. We can write TeX LaTeX class / style files and develop packages for special requirements. We can process various source formats -- MSWord, Word Perfect, plain ASCII -- and convert them to uniform TeX LaTeX files for final production.</p> 
     <p class="read-more"><a href="<?=BASE_URL?>About">Read More....</a></p>      
