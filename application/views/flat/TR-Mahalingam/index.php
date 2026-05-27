@@ -15,6 +15,12 @@
 <div class="container second-stage">
 	<div class="row">
 		<div class="col-md-4">
+<p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: #800020; margin-bottom: 25px; padding: 0 15px; line-height: 1.6; text-align: center;">
+        Announcing an authorised biography of the Legendary Flutist T.R. Mahalingam (6 Nov. 1926, Tiruvidaimarudur &ndash; 31 May 1986, Chennai)<br>
+        <span style="font-weight: 400; font-style: italic; text-transform: none; letter-spacing: 0; color: #666;">
+            on his 40th Punya Tithi (Remembrance Day)
+        </span>
+    </p>
 			<img src="<?=BASE_URL?>public/images/tr_mahalingam.png" class="img-fluid" alt="Book cover page" />
 		</div>	
 		<div class="col-md-8">
@@ -22,12 +28,6 @@
 
 <div class="book-header text-center my-5" style="max-width: 600px; margin: 0 auto; font-family: 'Georgia', serif;">
 
-<p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: #800020; margin-bottom: 25px; padding: 0 15px; line-height: 1.6;">
-        Announcing an authorised biography of the Legendary Flutist T.R. Mahalingam <br>
-        <span style="font-weight: 400; font-style: italic; text-transform: none; letter-spacing: 0; color: #666;">
-            on his 40th Punya Tithi (Remembrance Day)
-        </span>
-    </p>
     
     <h1 style="font-size: 3.5rem; font-weight: 400; color: #1a1a1a; margin-bottom: 10px; font-style: italic;">
         A Breath of Divinity
