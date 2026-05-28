@@ -13,14 +13,18 @@
 	</div>	
 </div>
 <div class="container second-stage">
+    <div class="row">
+        <div class="col-md-12">
+            <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: #800020; margin-bottom: 35px; padding: 0 15px; line-height: 1.6; text-align: center;">
+            Announcing an authorised biography of the Legendary Flautist T.R. Mahalingam (6 Nov. 1926, Tiruvidaimarudur &ndash; 31 May 1986, Chennai)<br>
+            <span style="font-size: 1.4em; font-weight: 400; font-style: italic; text-transform: none; letter-spacing: 0; color: #b38f4f;;">
+                on his 40th Punya Tithi <strong>(Remembrance Day)</strong>
+            </span>
+            </p>
+        </div>    
+    </div>
 	<div class="row">
 		<div class="col-md-4">
-<p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: #800020; margin-bottom: 25px; padding: 0 15px; line-height: 1.6; text-align: center;">
-        Announcing an authorised biography of the Legendary Flautist T.R. Mahalingam (6 Nov. 1926, Tiruvidaimarudur &ndash; 31 May 1986, Chennai)<br>
-        <span style="font-weight: 400; font-style: italic; text-transform: none; letter-spacing: 0; color: #666;">
-            on his 40th Punya Tithi (Remembrance Day)
-        </span>
-    </p>
 			<img src="<?=BASE_URL?>public/images/tr_mahalingam.png" class="img-fluid" alt="Book cover page" />
 		</div>	
 		<div class="col-md-8">
