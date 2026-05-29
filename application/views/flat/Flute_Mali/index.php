@@ -1,18 +1,151 @@
-<div class="container mt-2">
-    <div class="row justify-content-center pt-2">
-        
-        <div class="col-12 col-md-8 col-lg-6 pt-5">
-            
-            <div class="embed-responsive embed-responsive-16by9 shadow-sm rounded mt-5">
-                <iframe class="embed-responsive-item" 
-                        src="https://www.youtube.com/embed/sWC32jDlOls?rel=0" 
-                        allowfullscreen>
-                </iframe>
-            </div>
-            
+<style>
+  .announcement-block {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: #ffffff;
+  }
+  .ann-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 2rem;
+  }
+  .ann-ornament-line {
+    width: 90px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #9a1430);
+  }
+  .ann-ornament-line.rev {
+    background: linear-gradient(270deg, transparent, #9a1430);
+  }
+  .ann-ornament-diamond {
+    width: 10px;
+    height: 10px;
+    background: #9a1430;
+    transform: rotate(45deg);
+  }
+  .ann-ornament-dot {
+    width: 5px;
+    height: 5px;
+    background: #b8973e;
+    border-radius: 50%;
+  }
+  .ann-pre-label {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #9a1430;
+    margin-bottom: 1.4rem;
+  }
+  .ann-descriptor {
+    font-family: 'IM Fell English', Georgia, serif;
+    font-size: 1.25rem;
+    color: #2a2a2a;
+    margin-bottom: 0.4rem;
+  }
+  .ann-name {
+    font-family: 'IM Fell English', Georgia, serif;
+    font-size: 2.4rem;
+    font-style: italic;
+    color: #9a1430;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+  }
+  .ann-dates {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+    color: #222;
+    margin-bottom: 2rem;
+  }
+  .ann-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 2rem;
+  }
+  .ann-divider-rule {
+    width: 130px;
+    height: 1px;
+    background: #b8973e;
+    opacity: 0.7;
+  }
+  .ann-divider-motif {
+    color: #b8973e;
+    font-size: 1.3rem;
+  }
+  .ann-punya {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #777777;
+    margin-bottom: 0.5rem;
+  }
+  .ann-tithi-number {
+    font-family: 'IM Fell English', Georgia, serif;
+    font-size: 1.9rem;
+    color: #b8973e;
+    line-height: 1.3;
+    margin-bottom: 0.3rem;
+  }
+  .ann-tithi-label {
+    font-family: 'IM Fell English', Georgia, serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #2a2a2a;
+  }
+</style>
+
+<div class="container mt-5 pt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-7">
+      <div class="announcement-block">
+
+        <div class="ann-ornament">
+          <div class="ann-ornament-line"></div>
+          <div class="ann-ornament-dot"></div>
+          <div class="ann-ornament-diamond"></div>
+          <div class="ann-ornament-dot"></div>
+          <div class="ann-ornament-line rev"></div>
         </div>
+
+        <p class="ann-pre-label">Announcing an Authorised Biography of</p>
+        <p class="ann-descriptor">The Legendary Flautist</p>
+        <p class="ann-name">T. R. Mahalingam</p>
+
+        <p class="ann-dates">
+          6 Nov. 1926, Tiruvidaimarudur &nbsp;&ndash;&nbsp; 31 May 1986, Chennai
+        </p>
+
+        <div class="ann-divider">
+          <div class="ann-divider-rule"></div>
+          <span class="ann-divider-motif">&#9670;</span>
+          <div class="ann-divider-rule"></div>
+        </div>
+
+        <p class="ann-punya">Commemorating his</p>
+        <p class="ann-tithi-number">40th Punya Tithi</p>
+        <p class="ann-tithi-label">(Remembrance Day)</p>
+
+        <div class="ann-ornament mt-4">
+          <div class="ann-ornament-line"></div>
+          <div class="ann-ornament-dot"></div>
+          <div class="ann-ornament-diamond"></div>
+          <div class="ann-ornament-dot"></div>
+          <div class="ann-ornament-line rev"></div>
+        </div>
+
+      </div>
     </div>
-    <div class="row mt-5">
+  </div>
+</div>
+
+<div class="container mt-2">
+<!--     <div class="row mt-5">
         <div class="col-md-12">
             <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: #800020; margin-bottom: 35px; padding: 0 15px; line-height: 1.6; text-align: center;">
             Announcing an authorised biography of the Legendary Flautist T.R. Mahalingam (6 Nov. 1926, Tiruvidaimarudur &ndash; 31 May 1986, Chennai)<br>
@@ -21,7 +154,7 @@
             </span>
             </p>
         </div>    
-    </div>
+    </div> -->
 	<div class="row">
 		<div class="col-md-4">
 			<img src="<?=BASE_URL?>public/images/tr_mahalingam.png" class="img-fluid" alt="Book cover page" />
