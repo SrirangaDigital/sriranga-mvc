@@ -120,15 +120,57 @@ class orders extends Controller {
 	    return $ip;
 	}
 
-	public function getUserCountryCode($ip){
-		if($ip == null){
-			return "IN";
-		}
+	// old code
+	// public function getUserCountryCode($ip){
+	// 	if($ip == null){
+	// 		return "IN";
+	// 	}
 
-		$xml = simplexml_load_file("http://www.geoplugin.net/xml.gp?ip=" . $ip);
-		if(!$xml) return False;
-		return $xml->geoplugin_countryCode;
+	// 	$xml = simplexml_load_file("http://www.geoplugin.net/xml.gp?ip=" . $ip);
+	// 	if(!$xml) return False;
+	// 	return $xml->geoplugin_countryCode;
+	// }
+
+
+	//new code
+	public function getUserCountryCode($ip) {
+	    // 1. If IP is missing, or belongs to localhost/development environments, skip the API call
+	    if ($ip === null || $ip === '127.0.0.1' || $ip === '::1' || empty(trim($ip))) {
+	        return "IN";
+	    }
+
+	    $ip = trim($ip);
+
+	    // 2. Set up a 3-second max timeout context so your app doesn't hang if geoPlugin is slow
+	    $context = stream_context_create([
+	        'http' => [
+	            'timeout' => 3 
+	        ]
+	    ]);
+
+	    // 3. Switch to secure HTTPS to comply with modern remote server guardrails
+	    $apiUrl = "https://www.geoplugin.net/xml.gp?ip=" . urlencode($ip);
+	    
+	    // Safely download the XML data string using the timeout rule
+	    $xmlData = @file_get_contents($apiUrl, false, $context);
+
+	    // If the network request fails or times out, return the default country code
+	    if ($xmlData === false) {
+	        return "IN"; 
+	    }
+
+	    // 4. Parse the downloaded XML string into an object
+	    $xml = @simplexml_load_string($xmlData);
+
+	    // Critical Guardrail: Ensure $xml is a valid object and has the property before reading it
+	    if (!$xml || !isset($xml->geoplugin_countryCode)) {
+	        return "IN"; // Fixes: "Attempt to read property on bool" warning
+	    }
+
+	    // 5. Explicitly cast the XML element to a clean PHP string string and return it
+	    return (string) $xml->geoplugin_countryCode;
 	}
+
 
 	// public function testmail(){
 		

@@ -201,41 +201,72 @@ class viewHelper extends View {
 		return $content[$bookID];
 	}
 
-	public function displayCurrency(){
-	
-		$client  = @$_SERVER['HTTP_CLIENT_IP'];
-		$forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
-		$remote  = $_SERVER['REMOTE_ADDR'];
-		$country  = "Unknown";
-	
+	public function displayCurrency() {
+		
+	    $client   = @$_SERVER['HTTP_CLIENT_IP'];
+	    $forward  = @$_SERVER['HTTP_X_FORWARDED_FOR'];
+	    $remote   = $_SERVER['REMOTE_ADDR'];
+	    $ip       = "Unknown";
 
-		if(filter_var($client, FILTER_VALIDATE_IP))
-			$ip = $client;
+	    // Detect the true IP address
+	    if (filter_var($client, FILTER_VALIDATE_IP)) {
+	        $ip = $client;
+	    } elseif (filter_var($forward, FILTER_VALIDATE_IP)) {
+	        $ip = $forward;
+	    } else {
+	        $ip = $remote;
+	    }
 
-		elseif(filter_var($forward, FILTER_VALIDATE_IP))
-			$ip = $forward;
+	    $ip = trim($ip);
 
-		else
-			$ip = $remote;
-
-		// To be removed in production
-		//$ip = '117.247.182.254'; // India
-		//$ip = '72.229.28.185'; // USA
-		//$ip = '116.58.205.53'; // Bangladesh
+	    // --- TESTING INTERCEPTOR ---
+	    // Uncomment any line below to test different currencies on your local machine
+	    // $ip = '117.247.182.254'; // India (INR)
+	    // $ip = '72.229.28.185';   // USA (USD)
+	    // $ip = '116.58.205.53';  // Bangladesh (USD)
 
 
-		$xml = simplexml_load_file("http://www.geoplugin.net/xml.gp?ip=" . $ip);
+	    // --- LOCALHOST SAFETY BYPASS ---
+	    // If testing on localhost (::1 or 127.0.0.1), don't call the API. Default to INR directly.
+	    if ($ip === '127.0.0.1' || $ip === '::1' || empty($ip) || $ip === 'Unknown') {
+	        return 'INR'; 
+	    }
 
-		if(!$xml) return False;
+	    // --- SECURE API CALL WITH TIMEOUT ---
+	    // Prevent the server from hanging for 30 seconds if geoplugin is down/slow
+	    $context = stream_context_create([
+	        'http' => [
+	            'timeout' => 3 // Max wait time of 3 seconds
+	        ]
+	    ]);
 
-		$code = $xml->geoplugin_countryCode;
+	    // Use HTTPS instead of HTTP for modern server security
+	    $apiUrl = "https://www.geoplugin.net/xml.gp?ip=" . urlencode($ip);
+	    
+	    // Safely download the XML data string using our timeout rule
+	    $xmlData = @file_get_contents($apiUrl, false, $context);
 
-		if($code == 'IN') {
-			return 'INR';
-		}
-		else{
-			return 'USD';
-		}
+	    // If the network call failed or timed out, return a safe fallback currency
+	    if ($xmlData === false) {
+	        return 'INR'; 
+	    }
+
+	    // Parse the downloaded XML string into a usable object
+	    $xml = @simplexml_load_string($xmlData);
+
+	    // Final validation of the parsed object
+	    if (!$xml || !isset($xml->geoplugin_countryCode)) {
+	        return 'INR'; 
+	    }
+
+	    // --- CURRENCY LOGIC ---
+	    $code = (string) $xml->geoplugin_countryCode;
+
+	    if ($code === 'IN') {
+	        return 'INR';
+	    } else {
+	        return 'USD';
+	    }
 	}
 	
 	public function displayUnitPrice($unitPrice){
