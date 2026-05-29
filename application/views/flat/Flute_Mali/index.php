@@ -1,19 +1,18 @@
-<div class="container-fluid" style="margin: 100px 0px 0px 0px; padding-left:0px;padding-right:0px;">
-	<div class="row">
-		<div class="col-md-12" style="padding: 0px;">
-<div class="embed-responsive embed-responsive-16by9">
-                
+<div class="container mt-2">
+    <div class="row justify-content-center pt-2">
+        
+        <div class="col-12 col-md-8 col-lg-6 pt-5">
+            
+            <div class="embed-responsive embed-responsive-16by9 shadow-sm rounded mt-5">
                 <iframe class="embed-responsive-item" 
                         src="https://www.youtube.com/embed/sWC32jDlOls?rel=0" 
                         allowfullscreen>
                 </iframe>
-                
             </div>
-		</div>	
-	</div>	
-</div>
-<div class="container second-stage">
-    <div class="row">
+            
+        </div>
+    </div>
+    <div class="row mt-5">
         <div class="col-md-12">
             <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: #800020; margin-bottom: 35px; padding: 0 15px; line-height: 1.6; text-align: center;">
             Announcing an authorised biography of the Legendary Flautist T.R. Mahalingam (6 Nov. 1926, Tiruvidaimarudur &ndash; 31 May 1986, Chennai)<br>
@@ -43,9 +42,12 @@
         The Life and Music of <span style="color: #b38f4f;">T.R. Mahalingam</span>
     </h2>
     
-    <p style="font-family: 'Georgia', serif; font-size: 1rem; font-style: italic; color: #777; letter-spacing: 1px;">
+    <p style="font-family: 'Georgia', serif; font-size: 1rem; font-style: italic; color: #777; letter-spacing: 1px; margin-bottom: 2em;">
         An Authorized Biography
     </p>
+
+<form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Sv77ch0UDewFBz" async> </script> </form>
+
     
 </div>
 
