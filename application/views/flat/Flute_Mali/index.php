@@ -98,78 +98,140 @@
     font-style: italic;
     color: #2a2a2a;
   }
+
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+  .car-wrap { padding: 2rem 0; background: #ffffff; }
+
+  .car-header { text-align: center; margin-bottom: 1.8rem; padding: 0 1rem; }
+  .car-header-label { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: bold; font-size: 0.82rem; letter-spacing: 0.22em; text-transform: uppercase; color: #9a1430; margin-bottom: 6px; }
+  .car-header-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.65rem; font-weight: 600; color: #1a0a0e; line-height: 1.3; }
+  .car-header-rule { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 12px; }
+  .car-header-rule-line { width: 60px; height: 1px; background: #9a1430; }
+  .car-header-rule-diamond { width: 7px; height: 7px; background: #9a1430; transform: rotate(45deg); }
+
+  .car-viewport { overflow: hidden; }
+  .car-track { display: flex; transition: transform 0.55s cubic-bezier(0.4,0,0.2,1); will-change: transform; }
+  .car-slide { min-width: 100%; padding: 0 1.2rem; box-sizing: border-box; }
+
+  .car-card {
+    background: #fdf6ee;
+    border-radius: 12px;
+    padding: 2.2rem 2.2rem 1.8rem;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e8d5b7;
+    border-top: 4px solid #9a1430;
+  }
+
+  .car-quote-mark { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 5rem; color: #9a1430; line-height: 0.5; margin-bottom: 1.2rem; opacity: 0.5; }
+  .car-quote { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.22rem; font-style: italic; line-height: 1.85; color: #2a1208; margin-bottom: 1.6rem; flex: 1; }
+  .car-divider { width: 40px; height: 1px; background: #b8973e; margin-bottom: 1.2rem; }
+
+  .car-attribution { display: flex; align-items: center; gap: 14px; margin-top: auto; }
+  .car-avatar { width: 44px; height: 44px; border-radius: 50%; background: #9a1430; border: 1.5px solid #b8973e; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 13px; font-weight: 600; color: #fdf6ee; flex-shrink: 0; }
+  .car-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.08rem; font-weight: 600; color: #1a0a0e; margin-bottom: 2px; }
+  .car-role { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 0.85rem; color: #9a6020; font-style: italic; }
+
+  .car-controls { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 1.6rem; }
+
+  .car-btn {
+    width: 40px; height: 40px;
+    border: 1.5px solid #9a1430;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    color: #9a1430;
+    font-size: 18px;
+    line-height: 1;
+    transition: background 0.2s, color 0.2s;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .car-btn:hover { background: #9a1430; color: #fff; }
+
+  .car-dots { display: flex; gap: 7px; align-items: center; }
+  .car-dot { width: 7px; height: 7px; border-radius: 50%; background: #dbc9b0; cursor: pointer; transition: background 0.2s, transform 0.2s; }
+  .car-dot.active { background: #9a1430; transform: scale(1.3); }
+
+  .car-counter { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 0.85rem; color: #999; text-align: center; margin-top: 8px; letter-spacing: 0.08em; }
+
+
+  /* === VARIANT B: Centered, minimal rules === */
+  .var-b {
+    text-align: center;
+    padding: 1.2rem 1rem;
+    background: #fff;
+    /*border-top: 1px solid #9a1430;*/
+    border-bottom: 1px solid #9a1430;
+  }
+  .var-b .pre {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #9a1430;
+    margin-bottom: 6px;
+  }
+  .var-b .name {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.85rem;
+    font-style: italic;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.2;
+  }
+  .var-b .dates {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1rem;
+    font-weight: 900;
+    color: #666;
+    margin-bottom: 8px;
+    letter-spacing: 0.04em;
+  }
+  .var-b .sub {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1rem;
+    color: #444;
+  }
+  .var-b .sub em {
+    color: #b8973e;
+    font-style: italic;
+  }
+
 </style>
 
-<div class="container mt-5 pt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-8 col-lg-7">
-      <div class="announcement-block">
 
-        <div class="ann-ornament">
-          <div class="ann-ornament-line"></div>
-          <div class="ann-ornament-dot"></div>
-          <div class="ann-ornament-diamond"></div>
-          <div class="ann-ornament-dot"></div>
-          <div class="ann-ornament-line rev"></div>
-        </div>
 
-        <p class="ann-pre-label">Announcing an Authorised Biography of</p>
-        <p class="ann-descriptor">The Legendary Flautist</p>
-        <p class="ann-name">T. R. Mahalingam</p>
 
-        <p class="ann-dates">
-          6 Nov. 1926, Tiruvidaimarudur &nbsp;&ndash;&nbsp; 31 May 1986, Chennai
-        </p>
-
-        <div class="ann-divider">
-          <div class="ann-divider-rule"></div>
-          <span class="ann-divider-motif">&#9670;</span>
-          <div class="ann-divider-rule"></div>
-        </div>
-
-        <p class="ann-punya">Commemorating his</p>
-        <p class="ann-tithi-number">40th Punya Tithi</p>
-        <p class="ann-tithi-label">(Remembrance Day)</p>
-
-        <div class="ann-ornament mt-4">
-          <div class="ann-ornament-line"></div>
-          <div class="ann-ornament-dot"></div>
-          <div class="ann-ornament-diamond"></div>
-          <div class="ann-ornament-dot"></div>
-          <div class="ann-ornament-line rev"></div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container mt-2">
-<!--     <div class="row mt-5">
-        <div class="col-md-12">
-            <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: #800020; margin-bottom: 35px; padding: 0 15px; line-height: 1.6; text-align: center;">
-            Announcing an authorised biography of the Legendary Flautist T.R. Mahalingam (6 Nov. 1926, Tiruvidaimarudur &ndash; 31 May 1986, Chennai)<br>
-            <span style="font-size: 1.4em; font-weight: 400; font-style: italic; text-transform: none; letter-spacing: 0; color: #b38f4f;;">
-                on his 40th Punya Tithi <strong>(Remembrance Day)</strong>
-            </span>
-            </p>
-        </div>    
-    </div> -->
+<div class="container" style="margin-top: 150px;">
 	<div class="row">
 		<div class="col-md-4">
 			<img src="<?=BASE_URL?>public/images/tr_mahalingam.png" class="img-fluid" alt="Book cover page" />
+
+<div class="var-b">
+  <p class="pre">Announcing an authorised biography of the legendary flautist</p>
+  <p class="name">T. R. Mahalingam</p>
+  <p class="dates">6 Nov. 1926, Tiruvidaimarudur &nbsp;&ndash;&nbsp; 31 May 1986, Chennai</p>
+  <p class="sub">On his <em>40th Punya Tithi (Remembrance Day)</em></p>
+</div>
 		</div>	
 		<div class="col-md-8">
 
 
-<div class="book-header text-center my-5" style="max-width: 600px; margin: 0 auto; font-family: 'Georgia', serif;">
+
+
+<div class="book-header text-center my-2" style="max-width: 600px; margin: 0 auto; font-family: 'Georgia', serif;">
 
     
     <h1 style="font-size: 3.5rem; font-weight: 400; color: #1a1a1a; margin-bottom: 10px; font-style: italic;">
         A Breath of Divinity
     </h1>
     
-    <hr style="width: 60px; border-top: 2px solid #b38f4f; margin: 25px auto;">
+    <hr style="width: 60px; border-top: 2px solid #b38f4f; margin: 10px auto;">
     
     <h2 style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 1.25rem; font-weight: 600; text-transform: uppercase; letter-spacing: 3px; color: #4a4a4a; margin-bottom: 8px; line-height: 1.5;">
         The Life and Music of <span style="color: #b38f4f;">T.R. Mahalingam</span>
@@ -179,7 +241,8 @@
         An Authorized Biography
     </p>
 
-<form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Sv77ch0UDewFBz" async> </script> </form>
+            <form class="text-center mt-3"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Sv77ch0UDewFBz" async> </script> </form>
+
 
     
 </div>
