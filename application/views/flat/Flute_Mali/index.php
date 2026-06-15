@@ -229,11 +229,12 @@
     
     <h1 style="font-size: 3.5rem; font-weight: 400; color: #1a1a1a; margin-bottom: 10px; font-style: italic;">
         A Breath of Divinity
-    </h1>
-    
+    </h1>    
+
     <hr style="width: 60px; border-top: 2px solid #b38f4f; margin: 10px auto;">
+    <p style="color: red;"><strong>INR ₹1500</strong></p>
     
-    <h2 style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 1.25rem; font-weight: 600; text-transform: uppercase; letter-spacing: 3px; color: #4a4a4a; margin-bottom: 8px; line-height: 1.5;">
+    <h2 style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 1.25rem; font-weight: 600; text-transform: uppercase; letter-spacing: 3px; color: #4a4a4a; margin-top: 10px; margin-bottom: 8px; line-height: 1.5;">
         The Life and Music of <span style="color: #b38f4f;">T.R. Mahalingam</span>
     </h2>
     
@@ -241,7 +242,12 @@
         An Authorized Biography
     </p>
 
-            <form class="text-center mt-3"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Sv77ch0UDewFBz" async> </script> </form>
+
+<div class="preorder-box" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 12px 16px; max-width: 650px; margin: 15px auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); box-sizing: border-box;">
+  <p><span style="color: #8b263e; margin-right: 6px;">●</span>To be released in <strong style="color: #2d3748;">November 2026</strong>, marking the <strong style="color: #2d3748;">centenary of his birth</strong>. Reserve your copy at a pre-order discounted price of INR <strong style="color: #2d3748;">₹1,250</strong> and <span style="color: #2e6f40; font-weight: 600;">free delivery</span>.</p> 
+</div>
+
+<form class="text-center mt-3"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Sv77ch0UDewFBz" async> </script> </form> 
 
 
     
