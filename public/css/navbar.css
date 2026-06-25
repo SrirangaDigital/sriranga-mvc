@@ -140,6 +140,19 @@ ul.nav-pills>li{
 li.navSeparator{
 	display: none !important;
 }
+
+/* Change the color of the inactive indicators */
+.carousel-indicators li {
+  background-color: #000000; /* Black */
+  opacity: 0.5;              /* Make it slightly transparent so the active one stands out */
+}
+
+/* Change the color of the active indicator */
+.carousel-indicators .active {
+  background-color: #000000; /* Solid Black */
+  opacity: 1;                /* Fully visible */
+}
+
 @media(min-width:768px) {
 	li.navSeparator{
 		display: inline-block !important;

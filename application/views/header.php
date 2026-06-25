@@ -25,11 +25,11 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="<?=PUBLIC_URL?>css/navbar.css?v=1.1">
+    <link rel="stylesheet" href="<?=PUBLIC_URL?>css/navbar.css?v=1.2">
 	<link rel="stylesheet" href="<?=PUBLIC_URL?>css/custom.css?v=1.1">
 
     <link rel="stylesheet" href="<?=PUBLIC_URL?>css/fonts.css?v=1.0">
-    <link rel="stylesheet" href="<?=PUBLIC_URL?>css/viewer.css">    
+    <link rel="stylesheet" href="<?=PUBLIC_URL?>css/viewer.css">
     <!-- Fonts
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway:200,300,400|Roboto:300,400&amp;subset=latin-ext" rel="stylesheet">
